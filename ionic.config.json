@@ -1,0 +1,7 @@
+{
+  "name": "sqpayment",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
