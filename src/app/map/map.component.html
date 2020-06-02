@@ -1,0 +1,8 @@
+<ion-content>
+  <ion-select placeholder="Location" [(ngModel)]="selectedLoc" (ionChange)="onSelectLoc()">
+    <ion-select-option *ngFor="let location of locations; let i = index;" [value]="location.id">
+      {{location.name}}
+    </ion-select-option>
+  </ion-select>
+  <div #map id="map"></div>
+</ion-content>

@@ -1,0 +1,13 @@
+ion-select {
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+  --placeholder-color: white;
+  --placeholder-opacity: 1;
+  background-color: #3a7be0;
+  color: white;
+  height: 50px;
+}
+
+#map {
+  height: calc(100vh - 50px);
+}

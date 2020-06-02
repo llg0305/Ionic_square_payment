@@ -1,4 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { MapComponent } from 'src/app/map/map.component';
 
 declare var SqPaymentForm: any;
 
@@ -10,7 +12,7 @@ declare var SqPaymentForm: any;
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public modalController: ModalController) {}
 
   paymentForm;
 
@@ -76,5 +78,12 @@ export class HomePage {
     event.preventDefault();
     // Request a nonce from the SqPaymentForm object
     this.paymentForm.requestCardNonce();
+  }
+
+  async OpenMap() {
+    const modal = await this.modalController.create({
+      component: MapComponent,
+    });
+    return await modal.present();
   }
 }
